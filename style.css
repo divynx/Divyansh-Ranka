@@ -1,11 +1,11 @@
-/* ===========================
-   Google Fonts
-=========================== */
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
-/* ===========================
-   Reset
-=========================== */
+/* ==========================================
+   RESET
+========================================== */
 *{
     margin:0;
     padding:0;
@@ -13,33 +13,39 @@
     scroll-behavior:smooth;
 }
 
-body{
-    background:#F8F3EC;
-    color:#5B4636;
-    font-family:'Poppins',sans-serif;
+html{
+    scroll-behavior:smooth;
 }
 
-/* ===========================
-   Navigation
-=========================== */
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#FBF7F2,#F3E7D7);
+    color:#5C4033;
+    line-height:1.8;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
 nav{
     position:sticky;
     top:0;
     width:100%;
-    background:#EFE4D6;
+    background:rgba(255,248,240,0.95);
+    backdrop-filter:blur(10px);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 10%;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    z-index:100;
+    padding:20px 10%;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    z-index:1000;
 }
 
 .logo{
     font-family:'Playfair Display',serif;
-    font-size:30px;
-    font-weight:bold;
+    font-size:34px;
     color:#6F4E37;
+    font-weight:700;
 }
 
 nav ul{
@@ -51,23 +57,24 @@ nav ul{
 nav ul li a{
     text-decoration:none;
     color:#6F4E37;
+    font-size:17px;
     font-weight:600;
     transition:.3s;
 }
 
 nav ul li a:hover{
-    color:#A67B5B;
+    color:#B8895A;
 }
 
-/* ===========================
-   Home Section
-=========================== */
+/* ==========================================
+   HOME
+========================================== */
 #home{
     min-height:100vh;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:70px 10%;
+    padding:80px 10%;
     gap:60px;
 }
 
@@ -77,57 +84,71 @@ nav ul li a:hover{
 
 .home-text h1{
     font-family:'Playfair Display',serif;
-    font-size:60px;
+    font-size:68px;
     color:#5C4033;
+    margin-bottom:15px;
 }
 
 .home-text h2{
-    margin-top:15px;
-    font-size:24px;
+    font-family:'Playfair Display',serif;
+    font-size:28px;
     color:#8B6B4A;
-    font-weight:500;
+    margin-bottom:20px;
 }
 
 .home-text p{
-    margin-top:20px;
-    font-size:17px;
-    line-height:1.8;
+    max-width:600px;
+    font-size:18px;
+    color:#6A5546;
 }
 
 .button{
     display:inline-block;
     margin-top:35px;
     padding:14px 32px;
-    background:#8B5E3C;
+    background:#6F4E37;
     color:white;
     text-decoration:none;
-    border-radius:40px;
+    border-radius:50px;
     transition:.3s;
-    font-weight:600;
+    margin-right:15px;
 }
 
 .button:hover{
-    background:#6F4E37;
-    transform:translateY(-3px);
+    background:#A67B5B;
+    transform:translateY(-5px);
 }
 
-/* ===========================
-   Photo Box
-=========================== */
+.github-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 32px;
+    border:2px solid #6F4E37;
+    color:#6F4E37;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.github-btn:hover{
+    background:#6F4E37;
+    color:white;
+}
+
+/* ==========================================
+   PHOTO
+========================================== */
 .photo-box{
-    width:340px;
-    height:420px;
-    border:4px dashed #B89B7A;
-    border-radius:20px;
+    width:360px;
+    height:430px;
     background:#EFE4D6;
+    border:4px solid #D7C3AE;
+    border-radius:25px;
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#8B6B4A;
-    font-size:20px;
-    font-weight:600;
-    text-align:center;
     overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
 }
 
 .photo-box img{
@@ -136,56 +157,58 @@ nav ul li a:hover{
     object-fit:cover;
 }
 
-/* ===========================
-   About Section
-=========================== */
-#about{
+/* ==========================================
+   SECTIONS
+========================================== */
+section{
     padding:90px 10%;
 }
 
-#about h2{
+section h2{
     text-align:center;
     font-family:'Playfair Display',serif;
-    font-size:42px;
+    font-size:45px;
     color:#5C4033;
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
+section h2::after{
+    content:"";
+    width:80px;
+    height:4px;
+    background:#B8895A;
+    display:block;
+    margin:12px auto;
+    border-radius:10px;
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
 .about-card{
-    background:#FFFDF8;
+    background:#FFFDF9;
+    border-radius:20px;
     padding:40px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 }
 
 .about-card p{
-    line-height:1.9;
-    font-size:17px;
+    font-size:18px;
+    color:#6A5546;
 }
 
 .info{
-    margin-top:25px;
+    margin-top:30px;
 }
 
 .info p{
     margin:12px 0;
+    font-weight:500;
 }
 
-/* ===========================
-   Skills
-=========================== */
-#skills{
-    padding:90px 10%;
-}
-
-#skills h2{
-    text-align:center;
-    font-family:'Playfair Display',serif;
-    font-size:42px;
-    margin-bottom:40px;
-    color:#5C4033;
-}
-
+/* ==========================================
+   SKILLS
+========================================== */
 .skill-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -193,40 +216,101 @@ nav ul li a:hover{
 }
 
 .skill{
-    background:#EFE4D6;
-    padding:25px;
+    background:#FFFDF9;
+    border:2px solid #E7D7C5;
+    padding:30px;
     text-align:center;
-    border-radius:15px;
-    font-size:22px;
-    font-weight:600;
-    color:#6F4E37;
-    transition:.3s;
+    border-radius:20px;
+    transition:.35s;
+    cursor:pointer;
 }
 
 .skill:hover{
-    background:#D8C3AE;
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    background:#EEDFCF;
 }
 
-/* ===========================
-   Footer
-=========================== */
+.skill i{
+    font-size:45px;
+    color:#8B5E3C;
+    margin-bottom:15px;
+}
+
+.skill h3{
+    color:#5C4033;
+    margin-top:10px;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+.contact-card{
+    background:#FFFDF9;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-card p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-card a{
+    text-decoration:none;
+    color:#6F4E37;
+    font-weight:600;
+}
+
+.contact-card a:hover{
+    color:#B8895A;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
 footer{
-    background:#EFE4D6;
+    background:#6F4E37;
+    color:white;
     text-align:center;
     padding:25px;
-    margin-top:70px;
-    color:#6F4E37;
+    margin-top:50px;
 }
 
-/* ===========================
-   Responsive
-=========================== */
+footer a{
+    color:#F7E8D5;
+    text-decoration:none;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#F3E7D7;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#B8895A;
+    border-radius:10px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
 @media(max-width:900px){
 
     nav{
         flex-direction:column;
         gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     #home{
@@ -235,11 +319,19 @@ footer{
     }
 
     .home-text h1{
-        font-size:45px;
+        font-size:48px;
+    }
+
+    .home-text h2{
+        font-size:24px;
     }
 
     .photo-box{
         width:280px;
-        height:350px;
+        height:340px;
+    }
+
+    section h2{
+        font-size:36px;
     }
 }
