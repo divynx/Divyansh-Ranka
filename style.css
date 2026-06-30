@@ -1,0 +1,245 @@
+/* ===========================
+   Google Fonts
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8F3EC;
+    color:#5B4636;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+nav{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#EFE4D6;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 10%;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    z-index:100;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    font-weight:bold;
+    color:#6F4E37;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#6F4E37;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#A67B5B;
+}
+
+/* ===========================
+   Home Section
+=========================== */
+#home{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px 10%;
+    gap:60px;
+}
+
+.home-text{
+    flex:1;
+}
+
+.home-text h1{
+    font-family:'Playfair Display',serif;
+    font-size:60px;
+    color:#5C4033;
+}
+
+.home-text h2{
+    margin-top:15px;
+    font-size:24px;
+    color:#8B6B4A;
+    font-weight:500;
+}
+
+.home-text p{
+    margin-top:20px;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.button{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 32px;
+    background:#8B5E3C;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.button:hover{
+    background:#6F4E37;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   Photo Box
+=========================== */
+.photo-box{
+    width:340px;
+    height:420px;
+    border:4px dashed #B89B7A;
+    border-radius:20px;
+    background:#EFE4D6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#8B6B4A;
+    font-size:20px;
+    font-weight:600;
+    text-align:center;
+    overflow:hidden;
+}
+
+.photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===========================
+   About Section
+=========================== */
+#about{
+    padding:90px 10%;
+}
+
+#about h2{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    color:#5C4033;
+    margin-bottom:40px;
+}
+
+.about-card{
+    background:#FFFDF8;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.about-card p{
+    line-height:1.9;
+    font-size:17px;
+}
+
+.info{
+    margin-top:25px;
+}
+
+.info p{
+    margin:12px 0;
+}
+
+/* ===========================
+   Skills
+=========================== */
+#skills{
+    padding:90px 10%;
+}
+
+#skills h2{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    margin-bottom:40px;
+    color:#5C4033;
+}
+
+.skill-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.skill{
+    background:#EFE4D6;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    font-size:22px;
+    font-weight:600;
+    color:#6F4E37;
+    transition:.3s;
+}
+
+.skill:hover{
+    background:#D8C3AE;
+    transform:translateY(-8px);
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer{
+    background:#EFE4D6;
+    text-align:center;
+    padding:25px;
+    margin-top:70px;
+    color:#6F4E37;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    #home{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .home-text h1{
+        font-size:45px;
+    }
+
+    .photo-box{
+        width:280px;
+        height:350px;
+    }
+}
