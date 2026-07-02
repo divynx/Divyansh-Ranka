@@ -27,6 +27,14 @@ body{
 /* ==========================================
    NAVBAR
 ========================================== */
+h1{
+    text-align: center;
+    background-color: rgb(187, 239, 255);
+    color: #FFF;
+}
+#para{
+    text-align: center;
+}
 nav{
     position:sticky;
     top:0;
